@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-
+use Riazxrazor\LaravelSweetAlert\LaravelSweetAlert;
 use App\Pedido;
 use App\Product;
 use App\detalle_pedido;
@@ -62,7 +62,16 @@ public function despachar($id,$tipo){
     
     $ped->tipo = $tipo; 
     $ped->save();
+ 
+
+LaravelSweetAlert::setMessage([
+                        'title' => 'Cancelado!',
+                        'text' => 'Se atendio correctamente',
+                        'type' => 'warning',
+                        'showConfirmButton' =>true
+                    ]);
   
+
         return redirect()->route('pedidoAdmin.index');
 
     

@@ -181,6 +181,7 @@ return [
         Maatwebsite\Excel\ExcelServiceProvider::class,
         Laracasts\Flash\FlashServiceProvider::class,
           UxWeb\SweetAlert\SweetAlertServiceProvider::class,
+          Riazxrazor\LaravelSweetAlert\LaravelSweetAlertServiceProvider::class,
           
 
     ],
@@ -237,6 +238,8 @@ return [
       'Entrust'   => Zizaco\Entrust\EntrustFacade::class,
       'Excel' => Maatwebsite\Excel\Facades\Excel::class,
       'Alert' => UxWeb\SweetAlert\SweetAlert::class,
+      'LaravelSweetAlert' => Riazxrazor\LaravelSweetAlert\LaravelSweetAlert::class,
+
 
 
     ],

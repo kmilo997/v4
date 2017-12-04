@@ -15,7 +15,8 @@
         "laravelcollective/html": "^5.4.0",
         "maatwebsite/excel": "~2.1.0",
         "uxweb/sweet-alert": "^1.4",
-        "zizaco/entrust": "5.2.x-dev"
+        "zizaco/entrust": "5.2.x-dev",
+          "riazxrazor/laravel-sweet-alert": "^1.1.0"
     },
     "require-dev": {
         "filp/whoops": "~2.0",

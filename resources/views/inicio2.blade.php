@@ -14,7 +14,7 @@
     <link href="{{asset('css/datepicker3.css')}}" rel="stylesheet">
     <link href="{{asset('css/styles.css')}}" rel="stylesheet">
     <link href="{{asset('css/toastr.css')}}" rel="stylesheet"/>
-
+@LaravelSweetAlertCSS
     <!--Custom Font-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
     <!--[if lt IE 9]>
@@ -77,5 +77,6 @@
      <script src="{{asset('js/toastr.min.js')}}"></script>
 
 </body>
+@LaravelSweetAlertJS
 </html>
 @endrole

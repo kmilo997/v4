@@ -68,12 +68,6 @@
 {!! Form::close() !!}
 
 
-<script>
-function myFunction() {
-
-
-    alert("Se ha editado el proveedor");
-}
 
 </script>
 

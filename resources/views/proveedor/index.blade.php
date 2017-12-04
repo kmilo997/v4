@@ -133,9 +133,7 @@
 										</div>
 									</section>
 </div>
- <script src="{{asset('js/sweetalert.min.js')}}"></script>
 
-   @include('sweet::alert')
 							</div>
 </div>
 </div></div></div></div>

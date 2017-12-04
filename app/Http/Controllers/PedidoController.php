@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-
+use Riazxrazor\LaravelSweetAlert\LaravelSweetAlert;
 use App\Pedido;
 use App\Product;
 use App\Cliente;
@@ -85,8 +85,16 @@ $dv->producto=$request->nombre[$x];
   
 $dv->save();
 }
+
+LaravelSweetAlert::setMessage([
+                        'title' => 'Completado!',
+                        'text' => 'El pedido fue registrado',
+                        'type' => 'success',
+                        'showConfirmButton' =>true
+                    ]);
+
  
-return redirect()->route('pedido.index')->with('info','El pedido fue registrado');
+return redirect()->route('pedido.index');
 }
 
 
@@ -132,7 +140,14 @@ $ped->save();
         $ped = Pedido::find($id);
         $ped->delete();
         
-    	 return redirect()->route('pedido.index')->with('info','El pedido fue eliminado');
+
+        LaravelSweetAlert::setMessage([
+                        'title' => 'Completado!',
+                        'text' => 'El pedido fue eliminado',
+                        'type' => 'success',
+                        'showConfirmButton' =>true
+                    ]);
+    	 return redirect()->route('pedido.index');
          
     }
 

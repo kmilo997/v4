@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Riazxrazor\LaravelSweetAlert\LaravelSweetAlert;
 use Alert;
 use App\Product;
 use App\Http\Requests;
@@ -39,8 +39,14 @@ $product->fecha_vencimiento = $request->fecha_vencimiento;
 
 $product->save();
 
+LaravelSweetAlert::setMessage([
+                        'title' => 'Completado!',
+                        'text' => 'Producto agregado',
+                        'type' => 'success',
+                        'showConfirmButton' =>true
+                    ]);
+    return redirect()->route('products.index');
 
-    return redirect()->route('products.index')->with('success','Producto registrado');
 
 }
 
@@ -70,8 +76,13 @@ $product->fecha_vencimiento = $request->fecha_vencimiento;
 
 $product->save();
 
-
-    return redirect()->route('products.index')->with('info','El producto fue actualizado');
+LaravelSweetAlert::setMessage([
+                        'title' => 'Completado!',
+                        'text' => 'El producto fue actualizado',
+                        'type' => 'success',
+                        'showConfirmButton' =>true
+                    ]);
+    return redirect()->route('products.index');
 
 
 }
@@ -84,7 +95,13 @@ $product->save();
         $product = Product::find($id);
         $product->delete();
 
-    	return redirect()->route('products.index')->with('info','Producto eliminado');
+LaravelSweetAlert::setMessage([
+                        'title' => 'Completado!',
+                        'text' => 'Producto eliminado',
+                        'type' => 'success',
+                        'showConfirmButton' =>true
+                    ]);
+    	return redirect()->route('products.index');
     }
 
 

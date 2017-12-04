@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-
+use Riazxrazor\LaravelSweetAlert\LaravelSweetAlert;
 use App\Proveedor;
 use App\Http\Requests;
 use App\Http\Requests\ProveedorRequest;
@@ -50,7 +50,15 @@ $prov->Correo = $request->Correo;
 $prov->save();
 
 
-    return redirect()->route('proveedor.index')->with('info',"Se ha registrado correctamnte el proveedor");;
+LaravelSweetAlert::setMessage([
+                        'title' => 'Completado!',
+                        'text' => 'Proveedor agregado',
+                        'type' => 'success',
+                        'showConfirmButton' =>true
+                    ]);
+
+
+    return redirect()->route('proveedor.index');
     registar();
 
 
@@ -83,8 +91,15 @@ $prov->Correo = $request->Correo;
 
 $prov->save();
 
+LaravelSweetAlert::setMessage([
+                        'title' => 'Completado!',
+                        'text' => 'Proveedor Actualizado',
+                        'type' => 'success',
+                        'showConfirmButton' =>true
+                    ]);
 
-    return redirect()->route('proveedor.index')->with('info',"Se actualizado correctamente");;
+
+    return redirect()->route('proveedor.index');
 
 
 }
@@ -97,7 +112,15 @@ $prov->save();
         $prov = Proveedor::find($id);
         $prov->delete();
 
-    	 return redirect()->route('proveedor.index')->with('info',"Se eliminado correctamente");
+
+LaravelSweetAlert::setMessage([
+                        'title' => 'Completado!',
+                        'text' => 'Proveedor eliminado',
+                        'type' => 'success',
+                        'showConfirmButton' =>true
+                    ]);
+
+    	 return redirect()->route('proveedor.index');
 
     }
 

@@ -52,7 +52,8 @@
 														<th><h2><font color="green">&nbsp;&nbsp;Fecha Pedido</font></h2></th>
 														
 														<a href="{{ route('pedido.create')}}" class="btn btn-success button small btn-block btn-lg pull-rigth"><i class="fa fa-plus fa-2x" aria-hidden="true"></i>&nbsp; Nuevo</a>
-
+<div class="col-md-4">
+														<a href="{{ url('/limpiar')}}" class="btn btn-info  button small btn-block pull-rigth"><i class="fa fa-trash-o fa-2x fa-fw" aria-hidden="true"></i>&nbsp; Limpiar</a></div>
 													</tr>
 												</thead>
 												<tbody>
@@ -113,7 +114,7 @@
 </tbody>
 </table>
 {!! $ped->render() !!}
-<a href="{{ url('/limpiar')}}" class="btn btn-info  button small btn-block pull-rigth"><i class="fa fa-trash-o fa-2x fa-fw" aria-hidden="true"></i>&nbsp; Limpiar</a>
+
 	</div>
 						</div>
 						

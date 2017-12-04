@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-
+use Riazxrazor\LaravelSweetAlert\LaravelSweetAlert;
 use App\Venta;
 use App\Product;
 use App\Cliente;
@@ -81,7 +81,16 @@ $dv->save();
 
 }
 
- return redirect()->route('venta.index')->with('info',"Se ha registrado correctamente la venta");
+
+LaravelSweetAlert::setMessage([
+                        'title' => 'Completado!',
+                        'text' => 'Se ha registrado correctamente la venta',
+                        'type' => 'success',
+                        'showConfirmButton' =>true
+                    ]);
+
+
+ return redirect()->route('venta.index');
 }
 
 
@@ -119,8 +128,15 @@ $vent->unidades = $request->unidades;
 $vent->total = $request->total;
 $vent->save();
 
+LaravelSweetAlert::setMessage([
+                        'title' => 'Completado!',
+                        'text' => 'Se actualizado correctamente',
+                        'type' => 'success',
+                        'showConfirmButton' =>true
+                    ]);
 
-    return redirect()->route('venta.index')->with('info',"Se actualizado correctamente");;
+
+    return redirect()->route('venta.index');
 
 
 }
@@ -133,7 +149,17 @@ $vent->save();
         $vent = Venta::find($id);
         $vent->delete();
 
-    	 return redirect()->route('venta.index')->with('info',"Se eliminado correctamente");
+
+
+LaravelSweetAlert::setMessage([
+                        'title' => 'Completado!',
+                        'text' => 'Se eliminado correctamente',
+                        'type' => 'success',
+                        'showConfirmButton' =>true
+                    ]);
+
+
+    	 return redirect()->route('venta.index');
 
     }
 

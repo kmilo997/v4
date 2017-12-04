@@ -52,19 +52,15 @@
 
 
  <div class="panel-body">
+<div class="col-md-1"></div>
+
+<div class="col-md-10">
 
 
 
 
 
-
-
-
-
-
-
-
-
+<a href="{{ route('proveedor.index')}}" class="btn btn-success button small btn-block btn-lg pull-rigth" pull-rigth><i class="fa fa-reply fa-2x" aria-hidden="true"></i>&nbsp;  Listado</a><br>
 
 
 @include('proveedor.fragment.error')
@@ -76,12 +72,6 @@
 
 {!! Form::close() !!}
 
-<script>
-function myFunction() {
-
-
-    alert("Se ha registrado el proveedor");
-}
 
 
 

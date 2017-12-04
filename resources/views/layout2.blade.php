@@ -27,7 +27,7 @@
     <!-- Custom stylesheet - for your changes-->
     <link rel="stylesheet" href="css/custom.css">
     <!-- Favicon-->
-    <link rel="shortcut icon" href="favicon.png">
+    <link rel="shortcut icon" href="favicon.bmp">
     <!-- Tweaks for older IEs--><!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
@@ -92,7 +92,7 @@
         <link href="{{asset('css/toastr.css')}}" rel="stylesheet"/>
                 <link href="{{asset('css/toastr.min.css')}}" rel="stylesheet"/>
                  <link href="{{asset('css/sweetalert.css')}}" rel="stylesheet"/>
-
+@LaravelSweetAlertCSS
 
     <!--Custom Font-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -155,8 +155,8 @@
       <script src="{{asset('js/documento.js')}}"></script>
       <script src="{{asset('js/sweetalert.min.js')}}"></script>
 
-      <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 </body>
+@LaravelSweetAlertJS
 </html>
 @endrole

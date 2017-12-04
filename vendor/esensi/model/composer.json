@@ -1,0 +1,56 @@
+{
+    "name": "esensi/model",
+    "description": "The base model traits of Esensi",
+    "keywords": ["emersonmedia", "esensi", "laravel", "model", "trait", "eloquent", "validating", "validation", "encrypting", "hashing", "purge", "purging", "soft deleting", "trashing", "cast", "casting", "type", "juggling", "slugs", "sluggable"],
+    "authors": [
+        {
+            "name": "Emerson Media, LP.",
+            "email": "wishlist@emersonmedia.com"
+        },
+        {
+            "name": "Daniel LaBarge",
+            "email": "daniel@emersonmedia.com"
+        }
+    ],
+    "license": "MIT",
+    "require": {
+        "php": ">=5.5.9",
+        "nesbot/Carbon": "~1.9",
+        "illuminate/contracts": "~5.1",
+        "illuminate/database": "~5.1 || >= 5.1.27",
+        "illuminate/encryption": "~5.1",
+        "illuminate/events": "~5.1",
+        "illuminate/hashing": "~5.1",
+        "illuminate/support": "~5.1",
+        "illuminate/validation": "~5.1",
+        "paragonie/random_compat": "^1|^2",
+        "symfony/polyfill-php56": "~1.1",
+        "watson/validating": "~1.0.0 || ~2.0.0"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "2.0.0-alpha",
+        "fzaninotto/faker": "~1.4",
+        "mockery/mockery": "0.9.*",
+        "phpunit/phpunit": "~4.0",
+        "phpspec/phpspec": "~2.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Esensi\\Model\\": "src/"
+        }
+    },
+    "scripts": {
+        "fix": [
+            "vendor/bin/php-cs-fixer fix -v"
+        ],
+        "test": [
+            "vendor/bin/phpunit --colors=always",
+            "vendor/bin/php-cs-fixer fix -v --diff --dry-run;"
+        ]
+    },
+    "config": {
+        "preferred-install": "dist",
+        "bin-dir": "vendor/bin"
+    },
+    "minimum-stability": "stable"
+}

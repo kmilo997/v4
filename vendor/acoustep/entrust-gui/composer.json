@@ -1,0 +1,40 @@
+{
+    "name": "acoustep/entrust-gui",
+    "description": "A GUI for the Entrust package.",
+    "keywords": ["laravel","illuminate","auth","roles","acl","permission","gui"],
+    "homepage": "https://github.com/acoustep/entrust-gui",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mitch Stanley",
+            "email": "acoustep+entrustgui@fastmail.co.uk"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.9",
+        "illuminate/console": "~5.2",
+        "illuminate/support": "~5.2",
+        "prettus/l5-repository": "^2.1",
+        "esensi/model": "0.6.*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.1",
+        "mockery/mockery": "0.9.*",
+        "codeception/codeception": "2.1.*",
+        "codeception/mockery-module": "0.2.*",
+        "mikey179/vfsStream": "1.5.*",
+        "symfony/Console": "2.8.*",
+        "orchestra/testbench": "~3.2"
+    },
+    "autoload": {
+      "psr-4": {
+          "Acoustep\\EntrustGui\\": "src/"
+      }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Acoustep\\EntrustGui\\Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "dev"
+}
